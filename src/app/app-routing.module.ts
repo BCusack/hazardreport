@@ -1,8 +1,10 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { PasswordlessAuthComponent } from './passwordless-auth/passwordless-auth.component';
 
 const routes: Routes = [
   { path: '', loadChildren: './home/home.module#HomePageModule' },
+  { path: 'login', component: PasswordlessAuthComponent }
 ];
 
 @NgModule({
