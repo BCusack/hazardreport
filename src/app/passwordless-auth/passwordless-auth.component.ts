@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { AngularFireAuth } from 'angularfire2/auth';
+import { AngularFireAuth } from '@angular/fire/auth';
 import { Router } from '@angular/router';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'passwordless-auth',
@@ -29,7 +30,7 @@ export class PasswordlessAuthComponent implements OnInit {
   async sendEmailLink() {
     const actionCodeSettings = {
       // Your redirect URL
-      url: 'http://localhost:4200/login',
+      url: environment.redirect,
       handleCodeInApp: true
     };
 
