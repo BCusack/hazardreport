@@ -1,14 +1,15 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { PasswordlessAuthComponent } from './passwordless-auth/passwordless-auth.component';
-import { AuthGuard } from './auth.guard';
+import { AuthGuard } from './Auth/auth.guard';
 
 const routes: Routes = [
-  { path: '', loadChildren: './home/home.module#HomePageModule' },
-  { path: 'login', component: PasswordlessAuthComponent }
+  { path: '', loadChildren: './home/home.module#HomePageModule', canActivate: [AuthGuard] },
+  { path: 'login', loadChildren: './login/login.module#LoginPageModule' },
+  { path: 'report', loadChildren: './add-item/add-item.module#AddItemPageModule', canActivate: [AuthGuard] }
 ];
 
 @NgModule({
+  // authGuard routes
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })

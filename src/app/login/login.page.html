@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>login</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-button (click)="authService.login()" fill="outline" class="login">
+    <ion-icon slot="start" name="logo-google"></ion-icon>
+    Login with google
+  </ion-button>
+  <!-- <ion-fab vertical="top" horizontal="start" slot="fixed">
+    <ion-fab-button >
+      <ion-icon name="logo-google"></ion-icon>
+    </ion-fab-button>
+  </ion-fab> -->
+
+  <ion-fab vertical="top" horizontal="end" slot="fixed">
+    <ion-fab-button (click)="authService.logout()">
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>
+
+<ion-text color="primary">
+  <h1>{{authService.isLoggedIn}}</h1>
+</ion-text>

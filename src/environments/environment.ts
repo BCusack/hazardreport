@@ -12,7 +12,7 @@ export const environment = {
     storageBucket: "hazardreport-13d67.appspot.com",
     messagingSenderId: "36596629309"
   },
-  redirect: "http://localhost:4200"
+  redirect: "https://hazardreport-13d67.firebaseapp.com/login"
 };
 
 /*

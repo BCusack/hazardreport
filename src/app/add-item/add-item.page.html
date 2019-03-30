@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Report Item</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <form [formGroup]="reportForm" (ngSubmit)="onSubmit()">
+    <ion-item>
+      <ion-label position="floating">Location</ion-label>
+      <ion-input formControlName="location" type="text"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Description</ion-label>
+      <ion-input formControlName="description" type="text"></ion-input>
+    </ion-item>
+    <ion-button block fill="outline" type="submit">
+      Submit
+    </ion-button>
+  </form>
+</ion-content>

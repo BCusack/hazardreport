@@ -1,22 +1,22 @@
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { PasswordlessAuthPage } from './passwordless-auth.page';
+import { AddItemPage } from './add-item.page';
 
-describe('PasswordlessAuthPage', () => {
-  let component: PasswordlessAuthPage;
-  let fixture: ComponentFixture<PasswordlessAuthPage>;
+describe('AddItemPage', () => {
+  let component: AddItemPage;
+  let fixture: ComponentFixture<AddItemPage>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ PasswordlessAuthPage ],
+      declarations: [ AddItemPage ],
       schemas: [CUSTOM_ELEMENTS_SCHEMA],
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(PasswordlessAuthPage);
+    fixture = TestBed.createComponent(AddItemPage);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
