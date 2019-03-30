@@ -14,7 +14,7 @@
       <ion-label position="floating">Description</ion-label>
       <ion-input formControlName="description" type="text"></ion-input>
     </ion-item>
-    <ion-button block fill="outline" type="submit">
+    <ion-button block fill="outline" type="submit" [disabled]="reportForm.invalid">
       Submit
     </ion-button>
   </form>
